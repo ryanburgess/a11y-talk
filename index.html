@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Building Effective Landing Pages</title>
+
+		<meta name="description" content="Tips to help build effective landing pages for conversion.">
+		<meta name="author" content="Ryan Burgess">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+			pre{
+				white-space:pre-wrap !important;
+			}
+			code{
+				text-align: left;
+			}
+			.correct-incorrect h3{
+				text-align:left;
+				margin-left: 60px;
+				text-transform: none;
+			
+			}
+		</style>
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+			<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>10 Ways to Make Your Code More Accessible</h1>
+					<!--<p>
+						<small>Created by <a href="http://github.com/ryanburgess">Ryan Burgess</a> </small>
+					</p>-->
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<h2>Disabilities for the web</h2>
+					<ul>
+						<li>Blind</li>
+						<li>Low-vision</li>
+						<li>Hearing</li>
+						<li>Mobile/Dexterity (fine motor control, low strength, single handed)</li>
+						<li>Cognitive (attention memory-related, literacy, routines/predictability)</li>
+						<li>Vestibular issues</li>
+						<li>Speech</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>Cognitive hardest one to deal with and understand</li>
+						</ul>
+					</aside>
+					
+				</section>
+
+				<section>
+					<h2>1. Semantic HTML</h2>
+					<img src="img/semantic-html.jpg" alt="an example demonstrating the proper markup for sections on a web site" />
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h2>Validate your markup</h2>
+					<h3><a href="">W3C Validator</a>
+					<img src="img/w3c.png" alt="example of valid website success message from W3C validator tool"
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h2>2. Proper ordered heading tags</h2>
+
+					<div class="correct-incorrect">
+						<h3>Incorrect</h3>
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;" class="html">
+							<h1>Heading</h1>
+<h4>Heading</h4>
+<h3>Heading</h3>
+<h2>Heading</h2>
+						</code></pre>
+
+						<h3>Correct</h3>
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							<h1>Heading</h1>
+<h2>Heading</h2>
+<h3>Heading</h3>
+<h4>Heading</h4>
+						</code></pre>
+					</div>
+
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h2>3. Add alternative text for images</h2>
+
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<section>
+						<h2>Proper Alt Tags</h2>
+						<div class="correct-incorrect">
+							<h3>Incorrect</h3>
+							<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<img src="image.jpg">
+								
+							</code></pre>
+							<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<img src="image.jpg" alt="">
+								
+							</code></pre>
+
+							<h3>Correct</h3>
+							<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<img src="image.jpg" alt="image alt desecribed here">
+							</code></pre>
+						</div>
+						<aside class="notes">
+						
+						</aside>
+					</section>
+					
+					
+				</section>
+
+				<section>
+					<h2>Use Descriptive ALT Tags</h2>
+					<img src="img/barack-obama-1.jpg" alt="Barack Obama">
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						<img src="barack-obama-1.jpg" alt="Barack Obama eating a enormous piece of pizza">
+					</code></pre>
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				
+
+				<section>
+					<h2>Alternative text for background images</h2>
+					<img src="img/social-icons.png" alt="social media icons example">
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							<a href="#" class="twitter">Evernote on Twitter</a>
+<a href="#" class="facebook">Evernote Facebook page</a>
+<a href="#" class="google-plus">Evernote on Google Plus</a>
+<a href="#" class="youtube">Evernote YouTube channel</a>
+					</code></pre>
+					<aside class="notes">
+					
+					</aside>
+				</section>
+				<section>
+					<section>
+						<h2>4. Add Focus</h2>
+						<video controls>
+	  						<source src="vid/with-focus.mp4" type="video/mp4">
+	  					</video>
+						<aside class="notes">
+							There is a focus state added to the footer links to indicate where a user is while they tab through the content
+						</aside>
+					</section>
+					<section>
+						<h2>4. Add Focus</h2>
+						<video controls>
+	  						<source src="vid/no-focus.mp4" type="video/mp4">
+	  					</video>
+						<aside class="notes">
+							In the bottom left you can see tabbing through the links but there's no visual indication for the user to where they are on the page
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h2>5. Add a skip link for navigation</h2>
+					<video controls>
+  						<source src="vid/screen-capture-skiplink.mp4" type="video/mp4">
+  					</video>
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h2>6. Avoid ambiguous link text</h2>
+					<div class="correct-incorrect">
+						<h3>Incorrect</h3>
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							<a href="/prices">Click here</a> for prices
+						</code></pre>
+
+						<h3>Correct</h3>
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							<a href="/prices">Prices</a>
+						</code></pre>
+					</div>
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h2>7. Use form labels</h2>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							<label for="name">Name</label>
+<input type="text" id="name">
+						</code></pre>
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h2>7. Use fieldsets and legends</h2>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							<form>
+&#09;<fieldset>
+&#09;&#09;<legend>Personal Information</legend>
+&#09;&#09;<label for="name">Name</label>
+&#09;&#09;<input type="text" id="name">
+&#09;&#09;<label for="email">Email</label>
+&#09;&#09;<input type="email" id="email">
+&#09;</fieldset>
+</form>
+						</code></pre>
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<h2>9. Hide content appropriately</h2>
+					<h3>Hidden from screen readers</h3>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							display:none;
+						</code></pre>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						visability:hidden;
+					</code></pre>
+					<h3>Accessible by screen readers</h3>
+					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						position: relative;
+text-indent: -99999px;
+					</code></pre>
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+				<section>
+					<section>
+						<h2>10. Use ARIA landmark roles</h2>
+
+						<aside class="notes">
+							Landmark roles help assistive technologies like screenreader users orient themselves around a page
+						</aside>
+					</section>
+					<section>
+						<h2>Banner</h2>
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							<header role="banner">
+&#09;<h1>Evernote</h1>
+</header>
+						</code></pre>
+						<aside class="notes">
+							
+						</aside>
+					</section>
+					<section>
+						<h2>Navigation</h2>
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							<nav role="navigation">
+&#09;<ul>
+&#09;&#09;<li><a href="/">Home</a></li>
+&#09;&#09;<li><a href="/store">Store</a></li>
+&#09;&#09;<li><a href="/contact">Contact</a></li>
+&#09;</ul>
+</nav>
+						</code></pre>
+						<aside class="notes">
+							
+						</aside>
+					</section>
+					<section>
+						<h2>Main</h2>
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							<div id="content" role="main">
+&#09;<h1>Article title</h1>
+&#09;<p>Content...</p>
+</div>
+						</code></pre>
+						<aside class="notes">
+							
+						</aside>
+					</section>
+					<section>
+						<h2>Complementary</h2>
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							<aside action="/?search" role="complementary">
+&#09;<h3>More articles</h3>
+&#09;...
+</aside>
+						</code></pre>
+						<aside class="notes">
+							
+						</aside>
+					</section>
+					<section>
+						<h2>Footer</h2>
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							<footer role="contentinfo">
+&#09;...
+</footer>
+						</code></pre>
+						<aside class="notes">
+							
+						</aside>
+					</section>
+					<section>
+						<h2>Search</h2>
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							<form action="/?search" role="search">
+&#09;<label for="search">Search</label>
+&#09;<input type="text" id="search">
+</form>
+						</code></pre>
+						<aside class="notes">
+							
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h1>Thank you</h1>
+					<h3>Questions?</h3>
+
+					<aside class="notes">
+						
+					</aside>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
